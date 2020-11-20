@@ -25,7 +25,9 @@
         }
     },
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "google/apiclient": "^v2.8",
+        "nette/di": "^v3.0"
     },
     "require-dev": {
         "ninjify/qa": "^0.11",
