@@ -26,7 +26,7 @@ class GoogleDriveExtension extends CompilerExtension
             'credentials' => Expect::string(),
             'token' => Expect::string(),
             'prompt' => Expect::string('select_account consent'),
-            'scopes' => Expect::anyOf(
+            'scopes' => Expect::arrayOf(Expect::anyOf(
                 'drive',
                 'drive.appdata',
                 'drive.file',
@@ -35,7 +35,7 @@ class GoogleDriveExtension extends CompilerExtension
                 'drive.photos.readonly',
                 'drive.readonly',
                 'drive.scripts',
-            )->castTo('string'),
+            )->castTo('string')),
         ]);
     }
 
