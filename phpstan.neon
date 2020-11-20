@@ -1,0 +1,11 @@
+includes:
+	- vendor/phpstan/phpstan-phpunit/extension.neon
+
+parameters:
+	level: 5
+
+	excludes_analyse:
+		- /tests/_support/_generated
+
+	fileExtensions:
+		- php

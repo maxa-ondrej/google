@@ -1,0 +1,6 @@
+### Composer template
+composer.phar
+/vendor/
+
+### PHPStorm template
+/.idea
