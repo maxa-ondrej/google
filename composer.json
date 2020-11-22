@@ -1,6 +1,6 @@
 {
-    "name": "majksa/google-drive",
-    "description": "Google Drive extension for Nette.",
+    "name": "majksa/google",
+    "description": "Google extension for Nette.",
     "type": "library",
     "minimum-stability": "stable",
     "license": "GPL-3.0-only",
@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Majksa\\Google\\Drive\\": "src"
+            "Majksa\\Google\\": "src"
         }
     },
     "autoload-dev": {

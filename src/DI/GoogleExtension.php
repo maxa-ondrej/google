@@ -1,17 +1,17 @@
 <?php declare(strict_types = 1);
 
-namespace Majksa\Google\Drive\DI;
+namespace Majksa\Google\DI;
 
 use Google\Client;
 use Nette\DI\CompilerExtension;
 use Nette\Schema\Elements\Structure;
 use Nette\Schema\Expect;
 
-class GoogleDriveExtension extends CompilerExtension
+class GoogleExtension extends CompilerExtension
 {
 
     /** @var object */
-    public $config;
+    public object $config;
 
     /**
      * Defining scheme config structure.
@@ -26,16 +26,7 @@ class GoogleDriveExtension extends CompilerExtension
             'credentials' => Expect::string(),
             'token' => Expect::string(),
             'prompt' => Expect::string('select_account consent'),
-            'scopes' => Expect::arrayOf(Expect::anyOf(
-                'drive',
-                'drive.appdata',
-                'drive.file',
-                'drive.metadata',
-                'drive.metadata.readonly',
-                'drive.photos.readonly',
-                'drive.readonly',
-                'drive.scripts',
-            )->castTo('string')),
+            'scopes' => Expect::arrayOf(Expect::string()),
         ]);
     }
 
