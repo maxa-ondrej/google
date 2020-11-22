@@ -24,7 +24,6 @@ class GoogleExtension extends CompilerExtension
             'name' => Expect::string(),
             'accessType' => Expect::anyOf('online', 'offline')->default('online')->castTo('string'),
             'credentials' => Expect::string(),
-            'token' => Expect::string(),
             'prompt' => Expect::string('select_account consent'),
             'scopes' => Expect::arrayOf(Expect::string()),
         ]);
@@ -47,7 +46,6 @@ class GoogleExtension extends CompilerExtension
                     'application_name' => $this->config->name,
                     'access_type' => $this->config->accessType,
                     'credentials' => $this->config->credentials,
-                    'token' => $this->config->token,
                     'prompt' => $this->config->prompt,
                     'scopes' => $scopes,
                 ],
