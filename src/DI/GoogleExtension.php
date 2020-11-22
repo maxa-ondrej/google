@@ -7,11 +7,13 @@ use Nette\DI\CompilerExtension;
 use Nette\Schema\Elements\Structure;
 use Nette\Schema\Expect;
 
+/**
+ * Class GoogleExtension
+ *
+ * @property-read $config object|array
+ */
 class GoogleExtension extends CompilerExtension
 {
-
-    /** @var object */
-    public object $config;
 
     /**
      * Defining scheme config structure.
